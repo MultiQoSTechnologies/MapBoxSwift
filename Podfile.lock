@@ -1,0 +1,53 @@
+PODS:
+  - MapboxCommon (24.4.0)
+  - MapboxCoreMaps (11.4.0):
+    - MapboxCommon (~> 24.4)
+  - MapboxCoreSearch (2.1.0):
+    - MapboxCommon (= 24.4.0)
+  - MapboxDirections (2.14.0):
+    - Polyline (~> 5.0)
+    - Turf (~> 2.8.0)
+  - MapboxMaps (11.4.0):
+    - MapboxCommon (= 24.4.0)
+    - MapboxCoreMaps (= 11.4.0)
+    - Turf (= 2.8.0)
+  - MapboxSearch (2.1.1):
+    - MapboxCommon (= 24.4.0)
+    - MapboxCoreSearch (= 2.1.0)
+  - MapboxSearchUI (2.1.1):
+    - MapboxSearch (< 3.0, >= 2.1.1)
+  - Polyline (5.1.0)
+  - Turf (2.8.0)
+
+DEPENDENCIES:
+  - MapboxDirections
+  - MapboxMaps
+  - MapboxSearch
+  - MapboxSearchUI
+
+SPEC REPOS:
+  trunk:
+    - MapboxCommon
+    - MapboxCoreMaps
+    - MapboxCoreSearch
+    - MapboxDirections
+    - MapboxMaps
+    - MapboxSearch
+    - MapboxSearchUI
+    - Polyline
+    - Turf
+
+SPEC CHECKSUMS:
+  MapboxCommon: 6acbd8ff41d66abf498e1558b0739f25c562945a
+  MapboxCoreMaps: f306bb1b10ebe995a2247b40e99322ab7f9b8071
+  MapboxCoreSearch: cb34573ce19b9f468c18b19e20d253c9c751adf5
+  MapboxDirections: 3d468327d3e2ac52ae1be2176004976580cf6fd9
+  MapboxMaps: 82044383ae19ec124ff444ec4b5d3ce82cb36ba5
+  MapboxSearch: 80dbdb77d86d581fb99f7c2673a176db4ea34e59
+  MapboxSearchUI: 208b361ffdebe4ad9cfbd926ac19fb7833cfaf5b
+  Polyline: 2a1f29f87f8d9b7de868940f4f76deb8c678a5b1
+  Turf: aa2ede4298009639d10db36aba1a7ebaad072a5e
+
+PODFILE CHECKSUM: d60760bbab1b9fbff94caa0e60a8a7c1d623e54e
+
+COCOAPODS: 1.15.2

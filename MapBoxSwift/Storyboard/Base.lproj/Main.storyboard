@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="32700.99.1234" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="mWa-ei-tRs">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22685"/>
+        <capability name="Image references" minToolsVersion="12.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--MapVC-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="MapVC" customModule="MaxBoxDemo" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bBX-aD-iTH" customClass="MapView" customModule="MapboxMaps">
+                                <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PO1-A5-96L">
+                                        <rect key="frame" x="323" y="129" width="50" height="50"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="Lag-58-nkK"/>
+                                            <constraint firstAttribute="width" constant="50" id="Vat-4y-j40"/>
+                                        </constraints>
+                                        <color key="tintColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                        <state key="normal">
+                                            <imageReference key="image" image="map" catalog="system" symbolScale="large"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="btnViewOfflineAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="PFV-ef-jqa"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kJJ-eu-nOy">
+                                        <rect key="frame" x="323" y="189" width="50" height="50"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="50" id="Dck-wT-12s"/>
+                                            <constraint firstAttribute="height" constant="50" id="r75-4g-Fe4"/>
+                                        </constraints>
+                                        <color key="tintColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                        <state key="normal">
+                                            <imageReference key="image" image="arrow.triangle.turn.up.right.diamond" catalog="system" symbolScale="large"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="btnDirectionAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="EQw-0G-loZ"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="kJJ-eu-nOy" firstAttribute="trailing" secondItem="PO1-A5-96L" secondAttribute="trailing" id="EPC-Vo-5CS"/>
+                                    <constraint firstItem="kJJ-eu-nOy" firstAttribute="top" secondItem="PO1-A5-96L" secondAttribute="bottom" constant="10" id="or7-ct-n7W"/>
+                                </constraints>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IXm-V3-N0u">
+                                <rect key="frame" x="323" y="69" width="50" height="50"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="50" id="hWf-lb-sVk"/>
+                                    <constraint firstAttribute="height" constant="50" id="xo8-jS-zk9"/>
+                                </constraints>
+                                <color key="tintColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal">
+                                    <imageReference key="image" image="arrow.down.circle" catalog="system" symbolScale="large"/>
+                                </state>
+                                <connections>
+                                    <action selector="btnDownloadAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="0D7-cK-Qme"/>
+                                </connections>
+                            </button>
+                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9zz-zE-Pdp">
+                                <rect key="frame" x="168" y="452.33333333333331" width="57" height="27.666666666666686"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="23"/>
+                                <color key="textColor" systemColor="tintColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="IXm-V3-N0u" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="10" id="3LK-NV-aHt"/>
+                            <constraint firstItem="9zz-zE-Pdp" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="8oE-Pp-gj0"/>
+                            <constraint firstItem="bBX-aD-iTH" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="Cxm-Vn-y3N"/>
+                            <constraint firstItem="PO1-A5-96L" firstAttribute="trailing" secondItem="IXm-V3-N0u" secondAttribute="trailing" id="EEI-Tt-Tq5"/>
+                            <constraint firstItem="9zz-zE-Pdp" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="40" id="R7t-2D-DUv"/>
+                            <constraint firstAttribute="bottom" secondItem="bBX-aD-iTH" secondAttribute="bottom" id="Urk-T6-pKm"/>
+                            <constraint firstItem="bBX-aD-iTH" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="VMs-nq-z7t"/>
+                            <constraint firstItem="PO1-A5-96L" firstAttribute="top" secondItem="IXm-V3-N0u" secondAttribute="bottom" constant="10" id="ZqS-cD-5KC"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="IXm-V3-N0u" secondAttribute="trailing" constant="20" id="cIl-o7-3Oa"/>
+                            <constraint firstItem="bBX-aD-iTH" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="itn-P7-eGE"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="KxP-XQ-nSK"/>
+                    <connections>
+                        <outlet property="btnDirection" destination="kJJ-eu-nOy" id="MUz-a5-BRy"/>
+                        <outlet property="btnDownload" destination="IXm-V3-N0u" id="DUH-Zd-k91"/>
+                        <outlet property="btnOfflineMap" destination="PO1-A5-96L" id="nvW-63-K0E"/>
+                        <outlet property="lblProgress" destination="9zz-zE-Pdp" id="nvr-id-zOQ"/>
+                        <outlet property="mapView" destination="bBX-aD-iTH" id="vnK-KP-0dk"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="892" y="-35"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="yFY-fo-xaj">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" navigationBarHidden="YES" id="mWa-ei-tRs" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="CnE-8X-Oqv">
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="mHY-OM-zii"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Xvi-CG-lG6" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="130.53435114503816" y="-34.507042253521128"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="arrow.down.circle" catalog="system" width="128" height="123"/>
+        <image name="arrow.triangle.turn.up.right.diamond" catalog="system" width="128" height="124"/>
+        <image name="map" catalog="system" width="128" height="112"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="tintColor">
+            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
